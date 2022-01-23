@@ -1,0 +1,17 @@
+This directory is to CSVs of languages as they are to be initially run from.
+These are to be downloaded and copied from whenever a new bot is born.
+Format of the CSV files:
+
+Word,PoS,Clarifying-wordlist,(synonyms)
+
+Word - means the word itself
+PoS - The part of speech the word is categorized as
+Clarifying-wordlist - Additional clarifiers that may be necessary, given the part of speech
+	Verb - The 5 needed to be given: Indicative/Subjunctive, Timing, Active/Passive, Personal, fifth thing
+	Noun - Gender
+	Adjective - Comparative
+	Pronoun - Object case, persona, gender, singular/plural
+	Adverb - 
+	Preposition - 
+	Interjection - 
+	Conjunction - 
