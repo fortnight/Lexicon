@@ -1,0 +1,2 @@
+word,aardvark;pos,noun;meaning,an armadillo like animal - see "Arthur"
+word,authorization;pos,noun;meaning,proof of rights

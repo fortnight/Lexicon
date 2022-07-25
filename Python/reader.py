@@ -1,4 +1,27 @@
-def readword():
+def loadDict():
+    print("Loading from default dictionary")
+    defaultFile = open('./default.txt')
+    entries = defaultFile.readlines()
+    dictionary = []
+    entry = {}
+    for line in entries:
+        definition = line.split(';')
+        word = definition[0].split(',')
+        entry.setdefault(word[0], word[1])
+        pos = definition[1].split(',')
+        entry.setdefault(pos[0], pos[1])
+        meaning = definition[2].split(',')
+        entry.setdefault(meaning[0], meaning[1][0:-1])
+        print(entry)
+        dictionary += entry
+        word = ''
+        pos = ''
+        meaning = ''
+        entry = {}
+    print(dictionary)
+    return dictionary
+
+def addWord(dictionary):
     # Start with a word
     print("Would you like to add a word?")
     print("Enter a word, or the number 1337 to exit")
@@ -61,5 +84,8 @@ def readword():
     print("Word: " + word + ", which is a " + pos + ".")
     print("It means: " + meaning + ".")
     print("Thank you for your time")
+    dictionary += { 'word': word, 'pos': pos, 'meaning': meaning }
+    print(dictionary)
+    return dictionary
 
-readword()
+addWord(loadDict())
