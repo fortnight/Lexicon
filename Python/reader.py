@@ -1,3 +1,8 @@
+#def dictMenu(dictionary):
+# not written yet
+#   return removeWord(loadDict)
+
+
 def loadDict():
     print("Loading from default dictionary")
     defaultFile = open('./default.txt')
@@ -22,6 +27,7 @@ def loadDict():
     return dictionary
 
 def addWord(dictionary):
+
     # Start with a word
     print("Would you like to add a word?")
     print("Enter a word, or the number 1337 to exit")
@@ -43,6 +49,7 @@ def addWord(dictionary):
             break
     print("Thank you for entering the word: " + word)
     print()
+    
     # Part of Speech
     print("What is the word's part of speech?") 
     pos = input()
@@ -61,6 +68,7 @@ def addWord(dictionary):
         if(yeah.lower() == 'y'):
             print("Thank you. Moving on to definition")
             break
+    
     # Meaning
     print("What does " + word + " mean? (y/n)")
     meaning = input()
@@ -79,6 +87,7 @@ def addWord(dictionary):
         if(yeah.lower() == 'y'):
             print("Thank you. Moving on to save.")
             break
+    
     # Saving the word
     print("You have entered the following information:")
     print("Word: " + word + ", which is a " + pos + ".")
